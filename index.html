@@ -11,6 +11,17 @@
   <title>Frases Aleatórias - Amadok</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+    body{
+      font-family: 'Manrope', sans-serif;
+    }
+    p {
+      color: hsl(150,100%, 66%);
+      text-transform: uppercase;
+      font-weight: 800;
+      text-align: center;
+    }
     .container {
       width: 100%;
       max-width: 400px;
@@ -22,6 +33,18 @@
       padding: 20px;
       border-radius: 10px;
     }
+    .icone{
+      background-color: hsl(150,100%, 66%);
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      place-content: center;
+      position: absolute;
+      bottom: -25;
+      left: calc(50% - 25px);
+    }
   </style>
 </head>
 
@@ -29,7 +52,13 @@
   <main class="container">
     <p>Advice #117</p>
     <h1>"Amadok, aulas de CSS, HTML e JavaScript"</h1>
-  </main>
+    
+    <div class = "icone">
+      
+    
+      <img src="./images/icon-dice.svg" alt = "icon-dice"/>
+    </div>  
+    </main>
 </body>
 
 </html>
