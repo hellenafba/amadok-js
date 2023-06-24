@@ -51,7 +51,8 @@
 <body>
   <main class="container">
     <p>Advice #117</p>
-    <h1>"Amadok, aulas de CSS, HTML e JavaScript"</h1>
+    <h1 class="frase">"Amadok, aulas de CSS, HTML e JavaScript"</h1>
+ 
     
     <div class = "icone">
       
@@ -59,6 +60,27 @@
       <img src="./images/icon-dice.svg" alt = "icon-dice"/>
     </div>  
     </main>
+    <script>
+      var frase = document.getElementsByClassName('frase')[0]
+      
+
+      function pegarDados(){
+        fetch ('https://api.adviceslip.com/advice').then(resposta =>{
+          return resposta.json()
+        }).then(dadosEmJson => {
+          frase.innerHTML = dadosEmJson.slip.advice
+        })
+      }
+      pegarDados()
+
+      setInterval(function () {
+        pegarDados()
+      }, 2000)
+      
+
+      
+    </script>
+  
 </body>
 
 </html>
